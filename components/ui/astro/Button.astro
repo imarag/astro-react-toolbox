@@ -1,0 +1,8 @@
+---
+import { buttonClass } from "../../utils/componentClasses/buttonClass";
+const { variant, outline, size, class: className, ...rest } = Astro.props;
+---
+
+<button class={buttonClass({ variant, outline, size, className })} {...rest}>
+  <slot />
+</button>

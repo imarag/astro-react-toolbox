@@ -1,0 +1,6 @@
+---
+import { spinnerClass } from "@utils/componentClasses/spinnerClass";
+const { variant, type, size, class: className } = Astro.props;
+---
+
+<div class={spinnerClass({ variant, type, size, className })}><slot /></div>

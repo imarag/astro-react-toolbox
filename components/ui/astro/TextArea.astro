@@ -1,0 +1,6 @@
+---
+import { textAreaClass } from "@utils/componentClasses/textAreaClass";
+const { size, class: className, ...rest } = Astro.props;
+---
+
+<textarea class={textAreaClass({ size, className })} {...rest}></textarea>

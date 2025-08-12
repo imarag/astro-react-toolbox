@@ -1,0 +1,16 @@
+---
+import { collapseClass } from "@utils/componentClasses/collapseClass";
+const { label, collapseIcon = "arrow", class: className } = Astro.props;
+const collapseClassNew = collapseClass({
+  collapseIcon: collapseIcon,
+  className: className,
+});
+---
+
+<div class={collapseClassNew.headerClass}>
+  <input type="checkbox" />
+  <div class={collapseClassNew.labelClass}>{label}</div>
+  <div class={collapseClassNew.contentClass}>
+    <slot />
+  </div>
+</div>

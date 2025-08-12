@@ -1,0 +1,6 @@
+---
+import { labelClass } from "@utils/componentClasses/labelClass";
+const { class: className, ...rest } = Astro.props;
+---
+
+<label class={labelClass({ className })} {...rest}><slot /></label>

@@ -1,0 +1,13 @@
+---
+import { selectClass } from "@utils/componentClasses/selectClass";
+const { placeholder, options, class: className, ...rest } = Astro.props;
+---
+
+<select class={selectClass({ className })} {...rest}>
+  <option disabled selected>{placeholder}</option>
+  {
+    options.map((option) => (
+      <option value={option.value}>{option.label}</option>
+    ))
+  }
+</select>

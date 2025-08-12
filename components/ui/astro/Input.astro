@@ -1,0 +1,6 @@
+---
+import { inputClass } from "@utils/componentClasses/inputClass";
+const { size, type, class: className, ...rest } = Astro.props;
+---
+
+<input class={inputClass({ size, type, className })} {...rest} />

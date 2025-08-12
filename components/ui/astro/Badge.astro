@@ -1,0 +1,6 @@
+---
+import { badgeClass } from "@utils/componentClasses/badgeClass";
+const { variant, size, outline, class: className } = Astro.props;
+---
+
+<div class={badgeClass({ variant, size, outline, className })}><slot /></div>

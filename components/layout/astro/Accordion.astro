@@ -1,0 +1,23 @@
+---
+import { accordionClass } from "@utils/componentClasses/accordionClass";
+const {
+  label,
+  checked = false,
+  accordionName = "accordion",
+  accordionIcon = "arrow",
+  class: className,
+} = Astro.props;
+const accordionClassNew = accordionClass({ accordionIcon, className });
+---
+
+<div class={accordionClassNew.headerClass}>
+  {
+    checked ? (
+      <input type="checkbox" name={accordionName} checked />
+    ) : (
+      <input type="checkbox" name={accordionName} />
+    )
+  }
+  <div class={accordionClassNew.labelClass}>{label}</div>
+  <div class={accordionClassNew.contentClass}><slot /></div>
+</div>

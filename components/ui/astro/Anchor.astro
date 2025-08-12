@@ -1,0 +1,8 @@
+---
+import { anchorClass } from "../../utils/componentClasses/anchorClass";
+const { type, variant, size, outline, class: className, ...rest } = Astro.props;
+---
+
+<a class={anchorClass({ type, variant, size, outline, className })} {...rest}>
+  <slot />
+</a>

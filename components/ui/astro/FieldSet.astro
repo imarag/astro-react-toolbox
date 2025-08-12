@@ -1,0 +1,10 @@
+---
+import { fieldSetClass } from "@utils/componentClasses/fieldSetClass";
+const { legend = "", class: className, ...rest } = Astro.props;
+const fieldSetClassNew = fieldSetClass({ className });
+---
+
+<fieldset class={fieldSetClassNew.fieldSetClass} {...rest}>
+  <legend class={fieldSetClassNew.legendClass}>{legend}</legend>
+  <slot />
+</fieldset>
