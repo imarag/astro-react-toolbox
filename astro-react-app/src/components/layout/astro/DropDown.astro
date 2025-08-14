@@ -3,7 +3,7 @@ const {
   label = "my dropdown",
   position = "dropdown-start",
   hover = false,
-  type = "menu",
+  type = "menu", // menu or card
   class: className,
 } = Astro.props;
 const positionMapping = {
@@ -24,8 +24,8 @@ const positionMapping = {
 const baseClass = "dropdown";
 const contentClass =
   type === "menu"
-    ? "dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
-    : "dropdown-content card card-sm bg-base-100 z-1 w-64 shadow-md";
+    ? "dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm border border-base-200 rounded-md"
+    : "dropdown-content card card-sm bg-base-100 z-1 w-64 shadow-md border border-base-200 rounded-md";
 const labelClass = "btn m-1";
 const dropDownCardBody = "card-body";
 const globalClass = `${baseClass} ${positionMapping[position]} ${hover ? "dropdown-hover" : ""} ${className || ""}`;

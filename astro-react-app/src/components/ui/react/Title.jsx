@@ -1,6 +1,6 @@
 export default function Title({ variant = "page", className, children, ...rest }) {
     const variantMapping = {
-        page: "text-4xl font-semibold",
+        page: "text-5xl font-semibold",
         section: "text-3xl font-semibold",
         article: "text-2xl font-semibold",
     };

@@ -1,5 +1,61 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Button from "../components/ui/astro/Button.astro";
+import Alert from "../components/ui/astro/Alert.astro";
+import Anchor from "../components/ui/astro/Anchor.astro";
+import Title from "../components/ui/astro/Title.astro";
+import Spinner from "../components/ui/astro/Spinner.astro";
+import Input from "../components/ui/astro/Input.astro";
+import Select from "../components/ui/astro/Select.astro";
+import Label from "../components/ui/astro/Label.astro";
+import FieldSet from "../components/ui/astro/FieldSet.astro";
+import Badge from "../components/ui/astro/Badge.astro";
+import TextArea from "../components/ui/astro/TextArea.astro";
+import Toggle from "../components/ui/astro/Toggle.astro";
+import ToolTip from "../components/ui/astro/ToolTip.astro";
+import DropDown from "../components/layout/astro/DropDown.astro";
+import Accordion from "../components/layout/astro/Accordion.astro";
+import Collapse from "../components/layout/astro/Collapse.astro";
 ---
 
-<Layout />
+<Layout>
+  <Badge variant="error" outline={true} size="extraSmall">another badge</Badge>
+  <FieldSet legend="mylegend">
+    <Label for="what">my title</Label>
+    <Select
+      id="what"
+      placeholder="Select an option"
+      options={[
+        { value: "option1", label: "Option 1" },
+        { value: "option2", label: "Option 2" },
+      ]}
+    />
+  </FieldSet>
+  <TextArea columns="1" />
+  <ToolTip message="Toggle this option" variant="primary">
+    <Toggle size="extraLarge" checked={true} variant="error" />
+  </ToolTip>
+  <!-- <DropDown></DropDown>
+  <Accordion /> -->
+  <Collapse label="nada" collapseIcon="plus" />
+  <DropDown
+    label="Select an option"
+    position="topRight"
+    hover={true}
+    type="card"
+  >
+    <div>
+      <div>Item 1</div>
+      <div>Item 2</div>
+    </div>
+  </DropDown>
+  <Accordion>
+    <div>Item 1</div>
+    <div>Item 2</div>
+  </Accordion>
+  <Accordion>
+    <div>Item 1</div>
+    <div>Item 2</div>
+  </Accordion>
+  <Button>what</Button>
+</Layout>

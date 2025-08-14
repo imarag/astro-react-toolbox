@@ -2,7 +2,7 @@ export default function DropDown({
     label = "my dropdown",
     position = "dropdown-start",
     hover = false,
-    type = "menu",
+    type = "menu", // menu or card
     className,
     children,
 }) {

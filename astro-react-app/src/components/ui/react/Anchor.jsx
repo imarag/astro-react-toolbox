@@ -2,6 +2,7 @@ export default function Anchor({
     type = "link", // link or button
     variant = "primary",
     size = "medium",
+    underlineOnHover = false,
     outline = false,
     className,
     children,
@@ -38,9 +39,9 @@ export default function Anchor({
         large: "btn-lg",
         extraLarge: "btn-xl",
     };
-    const baseClass = `${type === "link" ? "link" : "btn"} inline-block`;
+    const baseClass = `${type === "link" ? "link" : "btn inline-flex items-center justify-center"} inline-block`;
     const typeClass = type === "link" ? (
-        `${variantMappingLink[variant] || ""}`
+        `${variantMappingLink[variant] || ""} ${underlineOnHover && "link-hover"}`
     ) : (
         `${variantMappingButton[variant] || ""} ${sizeMappingButton[size] || ""} ${outline ? "btn-outline" : ""}`
     )
